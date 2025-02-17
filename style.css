@@ -1,0 +1,80 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(background.jpg);
+    cursor: url(cursor.png), auto
+}
+
+@font-face {
+    font-family: October Crow;
+    src: url(October\ Crow.ttf);
+}
+
+.titulo {
+    color: #fcfcfc;
+    font-size: 60px;
+    background-color: rgb(70, 64, 89);
+    font-family: 'October Crow';
+}
+
+.titulodiv {
+    text-align: center;
+    margin: 50px;
+}
+
+.image_container {
+    border: 5px solid rgb(50, 35, 21);
+    height: 365px;
+    width: 650px;
+    position: relative;
+}
+
+.img_center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wilson_img {
+    width: 650px;
+}
+
+.webber_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    border-style: inherit;
+    border-color: rgb(35, 21, 8);
+}
+
+.wendy_img {
+    width: 350px;
+}
+
+.wendy_container {
+    position: relative;
+    display: inline-block;
+}
+
+.wendy_img {
+    width: 300px;
+    height: 200px;
+    transition: opacity 3s ease;
+}
+
+.ghost_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+.wendy_container:hover .wendy_img {
+    opacity: 0; /* Oculta a imagem original quando passar o mouse */
+}
+
+.wendy_container:hover .ghost_img {
+    opacity: 0.7; /* Mostra a imagem alternativa quando passar o mouse */
+}
